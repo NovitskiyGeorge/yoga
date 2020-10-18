@@ -4,22 +4,23 @@ window.addEventListener('DOMContentLoaded', function() {
         info = document.querySelector('.info-header'),
         tabContent = document.querySelectorAll('.info-tabcontent');
 
-    function hideTabContent(a) {
+
+
+    let hideTabContent = (a) => {
         for (let i = a; i < tabContent.length; i++) {
             tabContent[i].classList.remove('show');
             tabContent[i].classList.add('hide');
-
         }
-    }
+    };
 
     hideTabContent(1);
 
-    function showTabContent(b) {
+    let showTabContent = (b) => {
         if (tabContent[b].classList.contains('hide')) {
             tabContent[b].classList.remove('hide');
             tabContent[b].classList.add('show');
         }
-    }
+    };
 
     info.addEventListener('click', function(event) {
         let target = event.target;
@@ -36,9 +37,9 @@ window.addEventListener('DOMContentLoaded', function() {
 
     // Timer
 
-    let deadLine = '2020-10-15';
+    let deadLine = '2020-10-18';
 
-    function getTimeRemaining(endtime) {
+    let getTimeRemaining = (endtime) => {
         let t = Date.parse(endtime) -  Date.parse(new Date()),
         seconds = Math.floor((t/1000) % 60),
         minutes = Math.floor((t/1000/60) % 60),
@@ -50,9 +51,9 @@ window.addEventListener('DOMContentLoaded', function() {
             'minutes' : minutes,
             'seconds' : seconds
         };
-    }
+    };
 
-    function setClock(id, endtime) {
+    let setClock = (id, endtime) => {
         let timer = document.getElementById(id),
             hours = timer.querySelector('.hours'),
             minutes = timer.querySelector('.minutes'),
@@ -73,7 +74,7 @@ window.addEventListener('DOMContentLoaded', function() {
             }
         }
             
-    }
+    };
 
     setClock('timer', deadLine);
 
