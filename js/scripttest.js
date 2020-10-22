@@ -1,13 +1,13 @@
 
-let age = document.getElementById('age');
+// let age = document.getElementById('age');
 
-function showUser(surname, name) {
-alert("Пользователь " + surname + " " + name + ", его возраст " + this.value);
-}
+// function showUser(surname, name) {
+// alert("Пользователь " + surname + " " + name + ", его возраст " + this.value);
+// }
 
-age.addEventListener('change', function(){
-    showUser.apply(age, ['Dimitriy', 'Komarov']);       
-});
+// age.addEventListener('change', function(){
+//     showUser.apply(age, ['Dimitriy', 'Komarov']);       
+// });
 
 
 let drink = 0;
