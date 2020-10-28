@@ -143,11 +143,11 @@ window.addEventListener('DOMContentLoaded', function() {
 
         request.addEventListener('readystatechange', function() {
             if (request.readyState < 4) {
-                resolve()
+                resolve();
             } else if(request.readyState === 4 && request.status == 200) {
-                resolve()
+                resolve();
             } else {
-                reject()
+                reject();
             }
             request.send(data);
         });
@@ -162,7 +162,7 @@ window.addEventListener('DOMContentLoaded', function() {
             .then(() => statusMessage.innerHTML = message.loading)
             .then(() => statusMessage.innerHTML = message.success)
             .catch(() => statusMessage.innerHTML = message.failure)
-            .then(clearInput)
+            .then(clearInput);
     });
 
 
